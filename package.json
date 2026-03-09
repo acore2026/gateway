@@ -1,0 +1,33 @@
+{
+  "name": "gateway",
+  "version": "1.0.0",
+  "description": "Agent-centric API Gateway for routing messages between platforms and AI agents",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acore2026/gateway.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/acore2026/gateway/issues"
+  },
+  "homepage": "https://github.com/acore2026/gateway#readme",
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "grammy": "^1.41.1",
+    "https-proxy-agent": "^7.0.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
