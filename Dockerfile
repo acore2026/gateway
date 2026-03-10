@@ -1,7 +1,7 @@
 # Multi-stage build for optimized image size
 
 # Stage 1: Build
-FROM node:20-alpine AS builder
+FROM node:latest-alpine AS builder
 
 WORKDIR /app
 
@@ -19,7 +19,7 @@ COPY src ./src
 RUN npm run build
 
 # Stage 2: Runtime
-FROM node:20-alpine
+FROM node:latest-alpine
 
 WORKDIR /app
 
