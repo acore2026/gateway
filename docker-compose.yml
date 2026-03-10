@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  gateway:
+    build: .
+    container_name: telegram-gateway
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      # Override or add env vars here if needed
+      NODE_ENV: production
+    # Optional: mount volume for logs (if you add logging later)
+    # volumes:
+    #   - ./logs:/app/logs
+    # Optional: expose ports if needed in future (e.g., for HTTP endpoint)
+    # ports:
+    #   - "3000:3000"
+    networks:
+      - gateway-network
+    stdin_open: true
+    tty: true
+
+networks:
+  gateway-network:
+    driver: bridge
