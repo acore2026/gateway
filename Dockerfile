@@ -23,6 +23,14 @@ FROM node:latest-alpine
 
 WORKDIR /app
 
+# Install common utilities
+RUN apk add --no-cache \
+    curl \
+    wget \
+    jq \
+    dnsutils \
+    procps
+
 # Copy package files
 COPY package.json package-lock.json ./
 
